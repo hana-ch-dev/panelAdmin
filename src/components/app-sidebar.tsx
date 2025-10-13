@@ -6,6 +6,7 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -14,7 +15,6 @@ import {
   SidebarMenuSubItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { Menu } from "lucide-react";
 
 // This is sample data.
 const data = {
@@ -25,12 +25,12 @@ const data = {
       items: [
         {
           title: "ایجاد کتاب",
-          url: "#",
+          url: "/home",
           isActive: true,
         },
         {
           title: "تنظیمات",
-          url: "#",
+          url: "/setting",
         },
       ],
     },
@@ -40,6 +40,7 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
+      <SidebarHeader />
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>پنل ادمین</SidebarGroupLabel>
@@ -48,7 +49,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               {data.navMain.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url} className="font-medium">
+                    <a href={item.url} className="font-medium ">
                       {item.title}
                     </a>
                   </SidebarMenuButton>
@@ -72,9 +73,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarRail>
-        <Menu />
-      </SidebarRail>
+      <SidebarRail />
     </Sidebar>
   );
 }

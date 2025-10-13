@@ -1,10 +1,14 @@
 import { AppSidebar } from "./components/app-sidebar";
-import { SidebarProvider } from "./components/ui/sidebar";
+import { SidebarProvider, SidebarTrigger } from "./components/ui/sidebar";
 
-function App() {
+function App({ children }: { children: any }) {
   return (
     <SidebarProvider>
-      <AppSidebar />;
+      <AppSidebar />
+      <main>
+        <SidebarTrigger />
+        {children}
+      </main>
     </SidebarProvider>
   );
 }
