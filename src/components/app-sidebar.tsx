@@ -15,8 +15,9 @@ import {
   SidebarMenuSubItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import { Link } from "lucide-react";
 
-// This is sample data.
+
 const data = {
   navMain: [
     {
@@ -24,9 +25,21 @@ const data = {
       url: "#",
       items: [
         {
-          title: "ایجاد کتاب",
-          url: "/home",
+          title:"مدیریت کتاب ",
+          url: "/createBook",
           isActive: true,
+        },
+        {
+          title: "سفارشات",
+          url: "/orderbook",
+        },
+        {
+          title: "دسته بندی",
+          url: "/category",
+        },
+        {
+          title: "کاربر ادمین",
+          url: "/user",
         },
         {
           title: "تنظیمات",
@@ -49,9 +62,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               {data.navMain.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url} className="font-medium ">
+                    <Link to={item.url} className="font-medium">
                       {item.title}
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                   {item.items?.length ? (
                     <SidebarMenuSub>
