@@ -8,7 +8,7 @@ export default function EditBook({ onClose, book }: any) {
   function onSubmit(updatedNewBook: any) {
     updateBook({ id: book.id, updatedNewBook });
   }
-
+  
   return (
     <>
       <div className="fixed inset-0 backdrop-blur-sm bg-white/40 flex items-center justify-center p-4 ">
@@ -16,7 +16,7 @@ export default function EditBook({ onClose, book }: any) {
           <h2 className="text-md font-bold mb-4 text-gray-700 text-center">
             ویرایش کتاب
           </h2>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 ">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4  ">
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs text-gray-600 mb-1">نام</label>

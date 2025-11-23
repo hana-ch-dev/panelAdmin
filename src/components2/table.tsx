@@ -30,10 +30,10 @@ export default function Table() {
 
   return (
     <>
-      <div className="bg-gray-300 w-full  border border-gray-100 shadow-sm ">
+      <div className=" w-[80%] mx-auto mt-3   border border-gray-100 shadow-sm ">
         <table className="w-full border-collapse bg-white ">
           <thead>
-            <tr className="bg-gray-100 text-gray-600 text-xs border-b border-gray-100">
+            <tr className="bg-pink-200 text-gray-600 text-xs border-b border-gray-100">
               <th className="py-3 px-4 text-right text-sm ">نام کتاب</th>
               <th className="py-3 px-4 text-right font-sm text-xs">نویسنده</th>
               <th className="py-3 px-4 text-right font-sm text-xs">قیمت</th>
